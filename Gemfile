@@ -14,9 +14,16 @@ gem 'bootstrap-sass'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rest-client'
 gem 'figaro'
+gem 'carrierwave', '~> 2.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'database_cleaner', '~> 1.6.0'
+  gem 'cucumber-rails', require: false
+  gem 'simplecov', require: false
 end
 
 group :development do

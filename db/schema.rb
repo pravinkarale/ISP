@@ -24,8 +24,7 @@ ActiveRecord::Schema.define(version: 2020_09_05_085935) do
     t.string "contact_no"
     t.string "email"
     t.string "url"
-    t.string "image_name"
-    t.string "image_path"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

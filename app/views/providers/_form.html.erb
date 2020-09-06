@@ -1,70 +1,70 @@
-<%= form_for :provider, html: {class: "contact100-form validate-form", id: "new_provider"} do |f| %>
+<%= form_for :provider, html: {:multipart => true, id: "new_provider"} do |f| %>
 
   <span class='response_message mb-10'></span>
 
-  <div class='row'>
+  <div class='row form-group'>
     <div class='col-sm-6'>
       <%= f.label :name %>
       <div>
-        <%= f.text_field :name, placeholder: "Name" %>
+        <%= f.text_field :name, placeholder: "Name", class: "form-control"  %>
       </div>
     </div>
     <div class='col-sm-6'>
       <%= f.label :lowest_price %>
       <div>
-        <%= f.number_field :lowest_price, placeholder: "Lowest tariff price" %>
+        <%= f.number_field :lowest_price, placeholder: "Lowest tariff price", class: "form-control" %>
       </div>
     </div>
   </div>
 
-  <div class='row'>
+  <div class='row form-group'>
     <div class='col-sm-6'>
-      <%= f.label :rating %>
+      <%= f.label 'Rating (out of 5)' %>
       <div>
-        <%= f.number_field :rating, placeholder: "Rating" %>
+        <%= f.number_field :rating, step: 0.5, placeholder: "Rating", class: "form-control" %>
       </div>
     </div>
     <div class='col-sm-6'>
       <%= f.label :max_speed, 'Max Speed (in MB)' %>
       <div>
-        <%= f.number_field :max_speed, placeholder: "Maximum bandwidth" %>
+        <%= f.number_field :max_speed, placeholder: "Maximum bandwidth", class: "form-control" %>
       </div>
     </div>
   </div>
 
-  <div class='row'>
+  <div class='row form-group'>
     <div class='col-sm-6'>
       <%= f.label :description %>
       <div>
-        <%= f.text_area :description, placeholder: "Description" %>
+        <%= f.text_area :description, placeholder: "Description", class: "form-control" %>
       </div>
     </div>
     <div class='col-sm-6'>
       <%= f.label :contact_no %>
       <div>
-        <%= f.text_field :contact_no, placeholder: "contact_no" %>
+        <%= f.text_field :contact_no, placeholder: "contact_no", class: "form-control" %>
       </div>
     </div>
   </div>
 
-  <div class='row'>
+  <div class='row form-group'>
     <div class='col-sm-6'>
       <%= f.label :email %>
       <div>
-        <%= f.text_field :email, placeholder: "Email" %>
+        <%= f.text_field :email, placeholder: "Email", class: "form-control" %>
       </div>
     </div>
     <div class='col-sm-6'>
       <%= f.label :url %>
       <div>
-        <%= f.text_field :url, placeholder: "Enter website url" %>
+        <%= f.text_field :url, placeholder: "Enter website url", class: "form-control" %>
       </div>
     </div>
   </div>
 
   <div class="modal-footer">
-    <button type="button" class="btn btn-color2" data-dismiss="modal">Cancel</button>
-    <%= f.submit "create", class: "btn btn-sm btn-primary", data: { disable_with: false } %>
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+    <%= f.submit "create", class: "btn btn-primary", data: { disable_with: false } %>
   </div>
 
 <% end %>

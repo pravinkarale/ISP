@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
 Things you may want to cover:
 
-* Ruby version
+* Ruby version :- ruby 2.5.3p105
+* Rails Version :- Rails 5.2.4.3
 
-* System dependencies
+I have Used rails controller action to render html pages.
 
-* Configuration
+To call api I have used rest api. for that I have used 'rest-client' gem.
 
-* Database creation
+At front end, I have used jquery to manupulate DOM based on api respnse.
 
-* Database initialization
+I have write api for create provider, list providers, search/sort, show providers
 
-* How to run the test suite
+For now added sorting on 'price' and 'rating' columns and searching on 'name' and 'price' columns
 
-* Services (job queues, cache servers, search engines, etc.)
+search by will work in conjunction with search text
 
-* Deployment instructions
+written rspec for create provider with validation, search/sort functionality, show page
 
-* ...
+Added code coverage facility by simplecov gem

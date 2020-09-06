@@ -9,8 +9,7 @@ class CreateProviders < ActiveRecord::Migration[5.2]
       t.string :contact_no
       t.string :email
       t.string :url
-      t.string :image_name
-      t.string :image_path
+      t.string :image
       t.timestamps
     end
   end

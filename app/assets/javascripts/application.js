@@ -25,18 +25,18 @@ $(document).ready(function(){
         $('span.response_message').removeClass('failure')
         $('span.response_message').not(".success").addClass('success')
         $('span.response_message').text(data['message'])
-        $("#provider_name, #provider_lowest_price, #provider_rating, #provider_max_speed, #provider_description, #provider_contact_no, #provider_email, #provider_url").val("");
+        $("#provider_name, #provider_lowest_price, #provider_rating, #provider_max_speed, #provider_description, #provider_contact_no, #provider_email, #provider_url, #provider_image").val("");
         $("#newIspModal").modal('hide')
         provider = data['provider']
         var row = ""
-        row += '<tr>'
-        row +=  "<td>" + provider['name'] + "</td>"
-        row +=  "<td>" + provider['lowest_price'] + "</td>"
-        row +=  "<td>" + provider['rating'] + "</td>"
-        row +=  "<td>" + provider['max_speed'] + "</td>"
-        row +=  "<td>" + provider['description'] + "</td>"
-        row +=  "<td>" + provider['contact_no'] + "</td>"
-        row +=  "<td>" + provider['email'] + "</td>"
+        row += "<tr>"
+        row += "<td>" + provider['name'] + "</td>"
+        row += "<td>" + provider['lowest_price'] + "</td>"
+        row += "<td>" + provider['rating'] + "</td>"
+        row += "<td>" + provider['max_speed'] + "</td>"
+        row += "<td>" + provider['description'] + "</td>"
+        row += "<td>" + provider['contact_no'] + "</td>"
+        row += "<td>" + provider['email'] + "</td>"
 
         row += "<td><a target='_blank' class= btn btn-sm btn-primary href=" + provider['url'] + ">" + provider['url'] + "</a></td>"
         row += "<td><a class= btn btn-sm btn-primary href= /provider/" + provider['id'] + ">Show</a></td>"

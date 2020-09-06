@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
   resources :providers do
-    get :search, on: :collection
     get :home, on: :collection
   end
   namespace :api do
-    resources :providers do
-      collection do
-        get :search
-      end
-    end
+    resources :providers
   end
   root 'providers#home'
 end

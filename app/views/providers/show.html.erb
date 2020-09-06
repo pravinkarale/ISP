@@ -1,12 +1,15 @@
-<% if @provider.present? %>
-  Name: <%= @provider['name'] %></br>
-  Lowest Price: <%= @provider['lowest_price'] %></br>
-  Rating: <%= @provider['rating'] %></br>
-  Max Speed: <%= @provider['max_speed'] %></br>
-  Description: <%= @provider['description'] %></br>
-  Contact no: <%= @provider['contact_no'] %></br>
-  Email: <%= @provider['email'] %></br>
-  URL: <%= @provider['url'] %>
-<% else %>
-  Record not found
-<% end %>
+<div style="margin: 20px 350px;border: 1px solid black;padding: 10px;">
+  <% provider = @response_body.dig('provider') %>
+  <% if provider.present? %>
+    Name: <%= provider['name'] %></br>
+    Lowest Price: <%= provider['lowest_price'] %></br>
+    Rating: <%= provider['rating'] %></br>
+    Max Speed: <%= provider['max_speed'] %></br>
+    Description: <%= provider['description'] %></br>
+    Contact no: <%= provider['contact_no'] %></br>
+    Email: <%= provider['email'] %></br>
+    URL: <%= provider['url'] %>
+  <% else %>
+    <%= @response_body['message'] %>
+  <% end %>
+</div>
