@@ -1,5 +1,8 @@
-<div class="header">
-  <div class="header-right">
-    <%= link_to 'List providers', providers_path, class: "btn btn-lg btn-secondary" %>
-  </div>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Internet Service Providers</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <%= link_to 'List providers', providers_path, class: "p-2 text-dark" %>
+    <%= link_to 'New Provider', '#', class: "btn btn-outline-primary", data: {toggle: "modal", target: "#newIspModal"} if params[:controller] == 'providers' && params[:action] == 'index' %>
+  </nav>
+
 </div>
