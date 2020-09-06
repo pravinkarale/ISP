@@ -1,0 +1,32 @@
+.c-table__sort {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: .5em;
+}
+.c-table__sort a {
+  display: block;
+  line-height: 1;
+  position: relative;
+  height: 12px;
+}
+.c-table__sort .glyphicon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'fontello', sans-serif;
+  color: #999999;
+  font-size: 20px;
+}
+.c-table__sort .glyphicon-triangle-top {
+  &::before {
+    content: '\e805';
+  }
+}
+.c-table__sort .glyphicon-triangle-bottom {
+  &::before {
+    content: '\e806';
+  }
+}
+table th td{
+  text-align: left;
+}

@@ -1,0 +1,18 @@
+
+<%= form_tag providers_path, method: :get, remote: true do %>
+  <div class='row'>
+    <div class='col-sm-3'>
+      <%= label_tag 'Sort By' %>
+      <%= select_tag :sort_by, options_for_select([['Price Ascending', 'lowest_price_asc'],['Price Descending', 'lowest_price_desc'], ['Rating Ascending', 'rating_asc'],['Rating Descending', 'rating_desc']]), prompt: 'Please select', selected: @current_params[:sort_by] %>
+    </div>
+    <div class='col-sm-5'>
+      <%= label_tag 'Search By' %>
+      <%= select_tag :search_by, options_for_select([['Name', 'name'], ['price', 'price']]), prompt: 'Please select', selected: @current_params[:search_by] %>
+      <%= text_field_tag 'search_by_value' %>
+    </div>
+    <div class='col-sm-3'>
+      <%= submit_tag 'Search' %>
+    </div>
+  </div>
+<% end %>
+

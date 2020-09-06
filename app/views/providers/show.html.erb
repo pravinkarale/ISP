@@ -1,0 +1,12 @@
+<% if @provider.present? %>
+  Name: <%= @provider['name'] %></br>
+  Lowest Price: <%= @provider['lowest_price'] %></br>
+  Rating: <%= @provider['rating'] %></br>
+  Max Speed: <%= @provider['max_speed'] %></br>
+  Description: <%= @provider['description'] %></br>
+  Contact no: <%= @provider['contact_no'] %></br>
+  Email: <%= @provider['email'] %></br>
+  URL: <%= @provider['url'] %>
+<% else %>
+  Record not found
+<% end %>

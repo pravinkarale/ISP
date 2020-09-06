@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  resources :providers
+  resources :providers do
+    get :search, on: :collection
+    get :home, on: :collection
+  end
   namespace :api do
-    resources :providers, only: [], defaults: {format: :json} do
+    resources :providers do
       collection do
-        get :sort
         get :search
       end
     end
   end
+  root 'providers#home'
 end

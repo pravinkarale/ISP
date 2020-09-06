@@ -1,0 +1,4 @@
+<%= render 'search'%>
+<%= link_to 'New ISP', '#', class: "btn btn-info float-right", data: {toggle: "modal", target: "#newIspModal"} %>
+<%= render 'modal_window' %>
+<%= render 'list', providers: @providers %>

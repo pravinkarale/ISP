@@ -1,0 +1,55 @@
+<table id='provider_table' class="table mt-50 c-table table-striped">
+  <thead>
+    <tr>
+      <th>
+        <div class="c-table__sort">
+          Name
+        </div>
+      </th>
+      <th>
+        <div class="c-table__sort">
+          Lowest tariff price (per month)
+        </div>
+      </th>
+      <th>
+        <div class="c-table__sort">
+          Rating
+        </div>
+      </th>
+      <th>
+        <div class="c-table__sort">
+          Maximum bandwidth
+        </div>
+      </th>
+      <th>
+        <div class="c-table__sort">
+          Description
+        </div>
+      </th>
+      <th>
+        <div class="c-table__sort">
+          Contact number
+        </div>
+      </th>
+      <th>
+        <div class="c-table__sort">
+          Email
+        </div>
+      </th>
+      <th>
+        <div class="c-table__sort">
+          URL
+        </div>
+      </th>
+      <th>
+        <div>
+          Action
+        </div>
+      </th>
+
+    </tr>
+  </thead>
+  <tbody id='providers_list'>
+    <%= render 'list_object', providers: @providers %>
+  </tbody>
+</table>

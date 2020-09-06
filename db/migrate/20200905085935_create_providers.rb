@@ -4,7 +4,7 @@ class CreateProviders < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :lowest_price
       t.float :rating
-      t.string :max_speed
+      t.integer :max_speed
       t.text :description
       t.string :contact_no
       t.string :email

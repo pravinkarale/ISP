@@ -1,0 +1,13 @@
+<% providers&.each do |provider| %>
+  <tr>
+    <td><%= provider['name'] %></td>
+    <td><%= provider['lowest_price'] %></td>
+    <td><%= provider['rating'] %></td>
+    <td><%= provider['max_speed'] %></td>
+    <td><%= provider['description'] %></td>
+    <td><%= provider['contact_no'] %></td>
+    <td><%= provider['email'] %></td>
+    <td><%= link_to "#{provider['url']}", provider['url'], target: '_blank' %></td>
+    <td><%= link_to 'Show', provider_path(provider['id']), class: 'btn btn-sm btn-primary' %></td>
+  </tr>
+<% end %>
